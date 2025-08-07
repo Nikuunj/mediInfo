@@ -16,3 +16,9 @@ model items {
   shopUrl           String?
   price             Int?                       
 }
+
+model admin {
+  id                String          @id           @default(uuid())
+  email             String  
+  password          String
+}
