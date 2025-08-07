@@ -13,7 +13,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@medi/db": "workspace:*",
     "@medi/typescript-config": "workspace:*",
-    "@medi/db": "workspace:*"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
   }
 }
