@@ -1,0 +1,3 @@
+{
+    "extends": "@medi/typescript-config/base.json"
+}
