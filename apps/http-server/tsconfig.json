@@ -1,0 +1,7 @@
+{
+    "extends": "@medi/typescript-config/base.json",
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist"
+    }
+}
