@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@medi/common": "workspace:*",
     "@medi/db": "workspace:*",
     "@medi/typescript-config": "workspace:*",
+    "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
