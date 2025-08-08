@@ -42,7 +42,7 @@ admin.post('/signin', async (req: Request, res: Response) => {
 
         const token = jwt.sign({
             userId : user.id
-        }, jwt_secret);
+        }, jwt_secret,  { expiresIn: '1d' });
 
         res.json({
             token : `Bearer ${token}`

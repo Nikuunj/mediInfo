@@ -15,3 +15,6 @@ export const ItemSchema = z.object({
     price: z.number().nonnegative("price must be positive").optional(),
 })
 
+
+export type signinType = z.infer<typeof SignInUserSchema>
+export type itemType = z.infer<typeof ItemSchema>
