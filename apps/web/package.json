@@ -1,34 +1,36 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "type": "module",
+  "name": "x-draw",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001 --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@medi/ui": "workspace:*",
-    "next": "^15.4.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@types/axios": "^0.14.4",
+    "axios": "^1.10.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.6",
+    "lucide-react": "^0.525.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.4.2",
+    "@eslint/eslintrc": "^3",
+    "@medi/common": "workspace:*",
     "@medi/eslint-config": "workspace:*",
-    "@medi/tailwind-config": "workspace:*",
     "@medi/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "^4.1.5",
-    "@types/node": "^22.15.30",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.31.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.5",
-    "typescript": "5.8.2"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

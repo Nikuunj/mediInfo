@@ -10,7 +10,6 @@
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev --skip-generate",
     "db:deploy": "npx prisma migrate deploy"
-  
   },
   "keywords": [],
   "author": "",

@@ -14,4 +14,4 @@ app.use(cors({
 app.use('/v1/item', itemRoute);
 app.use('/v1/admin', admin);
 
-app.listen('3001');
+app.listen('3002');
