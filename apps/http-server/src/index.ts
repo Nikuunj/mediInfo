@@ -11,6 +11,8 @@ app.use(cors({
     origin: ['http://localhost:3000', frontend_url]
 }));
 
+app.use(express.json());
+
 app.use('/v1/item', itemRoute);
 app.use('/v1/admin', admin);
 
