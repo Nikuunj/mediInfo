@@ -11,8 +11,6 @@ export const ItemSchema = z.object({
     description: z.string().min(20),
     UseOf: z.string().min(10),
     url: z.string().url(),
-    shopUrl: z.string().url().optional(),
-    price: z.number().nonnegative("price must be positive").optional(),
 })
 
 
