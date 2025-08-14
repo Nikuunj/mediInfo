@@ -7,8 +7,13 @@ export const itemRoute: Router = Router();
 
 itemRoute.get('/', async (req, res) => {
     try {
-        const items = await prisma.items.findMany({})
-
+        const items = await prisma.items.findMany({ 
+            select: {
+                id: true,
+                name: true,
+                url: true
+            }
+        }) 
         res.json({
             items
         })
@@ -47,15 +52,16 @@ itemRoute.get('/:id', async (req, res) => {
 itemRoute.post('/', middleware, async (req, res) => {
     const verify = ItemSchema.safeParse(req.body);
     if(!verify.success) {
+        const err =  JSON.parse(verify.error.message)
         res.status(422).json({
-            massege: 'plz pass valid input'
+            msg: err[0].message
         })
         return
     }
 
     try {
         await prisma.items.create({
-            data: verify.data
+            data: { ...verify.data, shopUrl: req.body.shopUrl, price: req.body.price}
         })
 
         res.json({

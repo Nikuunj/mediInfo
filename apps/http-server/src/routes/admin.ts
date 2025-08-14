@@ -11,7 +11,7 @@ admin.post('/signin', async (req: Request, res: Response) => {
     const verify = SignInUserSchema.safeParse(req.body);
     if(!verify.success) {
         res.status(422).json({
-            massege: 'plz pass valid input'
+            msg: 'plz pass valid input'
         })
         return
     }
@@ -26,7 +26,7 @@ admin.post('/signin', async (req: Request, res: Response) => {
         
         if(!user) {
             res.status(404).json({
-                massege: 'user not found'
+                msg: 'user not found'
             })
             return;
         }
@@ -35,7 +35,7 @@ admin.post('/signin', async (req: Request, res: Response) => {
 
         if(!match) {
             res.status(403).json({
-                massege: 'Not Authorized'
+                msg: 'Not Authorized'
             })
             return;
         }
@@ -49,7 +49,7 @@ admin.post('/signin', async (req: Request, res: Response) => {
         })
     } catch(e) {
         res.status(500).json({
-            massege: 'somthing broke'
+            msg: 'somthing broke'
         })
     }
 })

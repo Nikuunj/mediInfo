@@ -1,8 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from 'jsonwebtoken';
+import { jwt_secret } from "../config/config";
 
 export const middleware = async (req: Request, res: Response, next: NextFunction) => {
     const authHeader = req.headers.authorization;
+    console.log(authHeader);
     const signM = authHeader?.split(' ')[1];
 
     if(!signM) {
@@ -11,14 +13,14 @@ export const middleware = async (req: Request, res: Response, next: NextFunction
         })
         return;
     }
-    jwt.verify(signM, "secret", (error, user) => {
+    jwt.verify(signM, jwt_secret, (error, user) => {
         if(user) {
-           next(); 
+           next() 
            return;
         } else {
-            res.status(403).json({
+            res.status(401).json({
                 msg: "Invalid or expired token"
-            })
+            });
             return;
         }
     });
