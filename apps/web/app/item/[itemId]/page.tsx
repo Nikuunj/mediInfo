@@ -1,7 +1,11 @@
+interface ParamProps {
+    params: Promise<{ itemId: string }>
+}
 
-function SingleItem() {
+async function SingleItem({ params }: ParamProps) {
+    const { itemId } = await params;
     return (
-        <div>SingleItem</div>
+        <div>{itemId}</div>
     )
 }
 
