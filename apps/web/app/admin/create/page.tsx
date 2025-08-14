@@ -192,8 +192,12 @@ const CreateForm: React.FC = () => {
             
             
             const resposnse = await createNewItem(submitData);
-            if(!resposnse) {
+            if(!resposnse.auth) {
                 router.push('../../signin');
+                return;
+            }
+
+            if(!resposnse.create) {
                 return;
             }
             // Reset form on success
