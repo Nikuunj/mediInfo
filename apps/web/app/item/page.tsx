@@ -4,7 +4,6 @@ import ItemAll from '@/components/itemAll';
 async function Allitems() {
 
     const product = await getAllProduct();
-    console.log(product);
     
       if (!Array.isArray(product.items)) {
         return (
