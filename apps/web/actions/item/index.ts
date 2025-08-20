@@ -39,16 +39,19 @@ export async function deleteItem(id: string): Promise<boolean> {
     }
 }
 
-export async function updateItem(id: string): Promise<boolean> {
+export async function updateItem(submitData: any, id: string) {
     try {
-        const { data } = await axios.put(`http://localhost:3002/v1/item/${id}`, authHeader())
-        return true;
+        const response = await axios.put(`http://localhost:3002/v1/item/${id}`, submitData , authHeader())
+        return { auth: true, update: true};
     } catch (e) {
         if (axios.isAxiosError(e) && e.response) {
             console.error(e.response.data.msg ?? e.response.data.massege)
             toast.error(e.response.data.msg ?? e.response.data.massege)
+            if(e.response.status === 401) {
+                return { auth: false, update: false};
+            }
         }
-        return false;
+        return { auth: true, update: false};;
     }
 }
 
