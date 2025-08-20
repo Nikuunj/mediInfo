@@ -1,14 +1,15 @@
 import { getOneItems } from "@/actions/item";
+import UpdateFrom from "@/components/UpdateFrom";
 
 interface ParamProps {
   params: Promise<{ itemId: string }>;
 }
 
+
 async function EditItem({ params }: ParamProps) {
   const { itemId } = await params;
-  const product = await getOneItems(itemId);
-
-    if (!product.item) {
+  
+    if (!itemId) {
         return (
             <div className="min-h-screen flex items-center justify-center px-4">
                 <div className="text-center">
@@ -26,7 +27,7 @@ async function EditItem({ params }: ParamProps) {
 
     return (
         <div>
-            hi here from product edit
+            <UpdateFrom itemId={itemId}/>
         </div>  
     );
 }
