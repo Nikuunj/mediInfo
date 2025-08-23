@@ -12,7 +12,7 @@ const CTA = () => {
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                 Ready to Take Control of Your Health?
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-zinc-500 leading-relaxed">
                 Join millions of users who trust MediInfo for reliable medical information 
                 and healthcare guidance. Start your journey to better health today.
               </p>
@@ -31,27 +31,27 @@ const CTA = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <Card className="border-0 bg-card/50">
                 <CardContent className="p-4 flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
                   <div>
                     <p className="text-sm font-medium text-foreground">Email Us</p>
-                    <p className="text-sm text-muted-foreground">support@mediinfo.com</p>
+                    <p className="text-sm text-zinc-500">support@mediinfo.com</p>
                   </div>
                 </CardContent>
               </Card>
               
               <Card className="border-0 bg-card/50">
                 <CardContent className="p-4 flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
                   <div>
                     <p className="text-sm font-medium text-foreground">Call Us</p>
-                    <p className="text-sm text-muted-foreground">1-800-MEDIINFO</p>
+                    <p className="text-sm text-zinc-500">1-800-MEDIINFO</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          <Card className="bg-primary text-primary-foreground border-0 shadow-2xl">
+          <Card className="bg-blue-500/90 text-zinc-100 border-0 shadow-2xl">
             <CardContent className="p-8 space-y-6">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Why Choose MediInfo?</h3>
