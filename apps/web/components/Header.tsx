@@ -9,25 +9,25 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b">
+    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-zinc-700/15">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-primary fill-primary" />
+              <Heart className="h-8 w-8 fill-[#4285F4] text-[#4285F4]" />
               <span className="text-2xl font-bold text-foreground">MediInfo</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">
+            <a href="#features" className="text-zinc-700 hover:text-primary transition-colors">
               Features
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="#about" className="text-zinc-700 hover:text-primary transition-colors">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a href="#contact" className="text-zinc-700 hover:text-primary transition-colors">
               Contact
             </a>
           </nav>
