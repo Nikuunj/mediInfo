@@ -61,7 +61,7 @@ const Features = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
             Everything You Need for Better Health
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-zinc-500 max-w-2xl mx-auto">
             Comprehensive medical information and tools designed to help you make informed health decisions.
           </p>
         </div>
@@ -73,13 +73,13 @@ const Features = () => {
               className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:bg-card"
             >
               <CardContent className="p-6 text-center space-y-4">
-                <div className="mx-auto w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <feature.icon className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-zinc-500 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>
