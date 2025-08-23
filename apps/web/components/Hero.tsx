@@ -15,10 +15,12 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                 Your Trusted
-                <span className="text-primary block">Medical Information</span>
+                <span className="block bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                  Medical Information
+                </span>
                 Platform
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-zinc-500 leading-relaxed">
                 Access reliable medical information, connect with healthcare professionals, 
                 and take control of your health journey with MediInfo.
               </p>
@@ -36,15 +38,15 @@ const Hero = () => {
 
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
+                <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground">Verified Information</p>
               </div>
               <div className="text-center">
-                <Users className="h-8 w-8 text-primary mx-auto mb-2" />
+                <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground">Expert Network</p>
               </div>
               <div className="text-center">
-                <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
+                <Clock className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground">24/7 Access</p>
               </div>
             </div>
