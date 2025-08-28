@@ -4,11 +4,12 @@ import { ArrowRight, Shield, Users, Clock } from "lucide-react";
 import medicalHero from "@/assets/medical-hero.jpg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Hero = () => {
   const router = useRouter();
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-medical-blue-light to-background">
+    <section className="relative  min-h-screen bg-gradient-to-br from-medical-blue-light to-background">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -27,13 +28,12 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8 py-6 group" onClick={() => router.push('/item')}>
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Learn More
-              </Button>
+              <Link href={'/item'} className="cursor-pointer">
+                <Button size="lg" className="text-lg px-8 py-6 group" onClick={() => router.push('/item')}>
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-3 gap-6 pt-8">

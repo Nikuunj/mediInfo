@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -21,19 +22,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-zinc-700 hover:text-primary transition-colors">
-              Features
-            </a>
-            <a href="#about" className="text-zinc-700 hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-zinc-700 hover:text-primary transition-colors">
-              Contact
-            </a>
+            
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button  onClick={() => router.push('/item')}>Get Started</Button>
+            <Link href={'/item'} className="cursor-pointer">
+              <Button  onClick={() => {}}>Get Started</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
