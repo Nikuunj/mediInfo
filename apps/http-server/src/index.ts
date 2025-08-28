@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors({
     origin: ['http://localhost:3000', frontend_url]
-}));
+})); 
 
 app.use(express.json());
 

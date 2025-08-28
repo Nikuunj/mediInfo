@@ -22,7 +22,6 @@ admin.post('/signin', async (req: Request, res: Response) => {
                 email: verify.data.email
             }
         })
-
         
         if(!user) {
             res.status(404).json({
