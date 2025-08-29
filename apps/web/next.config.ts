@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     images: {
-      domains: ['ik.imagekit.io'], // Allow ImageKit URLs
+      domains: ['ik.imagekit.io'],
     },
     env: {
       NEXT_PUBLIC_IMAGEKIT_PRIVATE_KEY: process.env.NEXT_PUBLIC_IMAGEKIT_PRIVATE_KEY,
