@@ -6,7 +6,11 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "db:generate": "turbo run db:generate",
+    "db:deploy": "turbo run db:deploy",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start:web": "cd ./apps/web && pnpm run start",
+    "start:http-server": "cd ./apps/http-server && pnpm run start"
   },
   "devDependencies": {
     "prettier": "^3.6.0",
