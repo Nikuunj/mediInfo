@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 export async function signin({ email, password }: signinType): Promise<string> {
      try {
-          const reponse = await axios.post('http://localhost:3002/v1/admin/signin', {
+          const reponse = await axios.post('http://192.168.1.10:3002/v1/admin/signin', {
                email,
                password
           })

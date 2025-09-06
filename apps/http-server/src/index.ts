@@ -7,9 +7,7 @@ import { admin } from './routes/admin';
 
 const app = express();
 
-app.use(cors({
-    origin: ['http://localhost:3000', frontend_url]
-}));
+app.use(cors());
 
 app.use(express.json());
 

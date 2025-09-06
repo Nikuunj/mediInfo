@@ -9,7 +9,7 @@ const authHeader = () => ({
 
 export async function getAllProduct() {
     try {
-        const response = await axios.get('http://localhost:3002/v1/item');
+        const response = await axios.get('http://192.168.1.10:3002/v1/item');
         const product = response.data;    
         return product;
     } catch(e) {
@@ -19,7 +19,7 @@ export async function getAllProduct() {
 
 export async function getOneItems(id: string) {
     try {
-        const { data } = await axios.get(`http://localhost:3002/v1/item/${id}`)
+        const { data } = await axios.get(`http://192.168.1.10:3002/v1/item/${id}`)
         return data;
     } catch (e) {
         return {};
@@ -28,7 +28,7 @@ export async function getOneItems(id: string) {
 
 export async function deleteItem(id: string): Promise<boolean> {
     try {
-        const { data } = await axios.delete(`http://localhost:3002/v1/item/${id}`, authHeader())
+        const { data } = await axios.delete(`http://192.168.1.10:3002/v1/item/${id}`, authHeader())
         return true;
     } catch (e) {
         if (axios.isAxiosError(e) && e.response) {
@@ -41,7 +41,7 @@ export async function deleteItem(id: string): Promise<boolean> {
 
 export async function updateItem(submitData: any, id: string) {
     try {
-        const response = await axios.put(`http://localhost:3002/v1/item/${id}`, submitData , authHeader())
+        const response = await axios.put(`http://192.168.1.10:3002/v1/item/${id}`, submitData , authHeader())
         return { auth: true, update: true};
     } catch (e) {
         if (axios.isAxiosError(e) && e.response) {
@@ -59,7 +59,7 @@ export async function createNewItem(submitData: any) {
     try {
         console.log(submitData);
         
-        const response = await axios.post('http://localhost:3002/v1/item', submitData , authHeader())
+        const response = await axios.post('http://192.168.1.10:3002/v1/item', submitData , authHeader())
         return { auth: true, create: true};
     } catch (e) {
         if (axios.isAxiosError(e) && e.response) {
